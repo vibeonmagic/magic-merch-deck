@@ -1006,7 +1006,8 @@ function setLang(lang) {
 }
 
 // PDF Export
-document.getElementById('pdf-export').addEventListener('click', async function() {
+var pdfExportBtn = document.getElementById('pdf-export');
+if (pdfExportBtn) pdfExportBtn.addEventListener('click', async function() {
   const btn = this;
   btn.disabled = true;
   btn.textContent = 'Generating...';
